@@ -1,3 +1,12 @@
+/*
+ * @Author: zhengjiefeng zhengjiefeng
+ * @Date: 2024-04-02 09:22:21
+ * @LastEditors: zhengjiefeng zhengjiefeng
+ * @LastEditTime: 2024-04-03 14:19:27
+ * @FilePath: \su7-replica\src\Experience\World\Car.ts
+ * @Description: 
+ * 
+ */
 import * as kokomi from "kokomi.js";
 import * as THREE from "three";
 import * as STDLIB from "three-stdlib";
@@ -27,7 +36,7 @@ export default class Car extends kokomi.Component {
   }
   update(): void {
     this.wheelModel?.children.forEach((item) => {
-      item.rotateZ(this.base.params.speed * 0.03);
+      item.rotateZ(-this.base.params.speed * 0.03);
     });
   }
   handleModel() {
